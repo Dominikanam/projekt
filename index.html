@@ -7,7 +7,7 @@
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
 		<link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
 		<link rel="stylesheet" type="text/css" href="css/style.css" />
-		<link rel="stylesheet" type="text/css" href="css/Glyphter.css" />
+		<link rel="stylesheet" type="text/css" href="vendor/Glyphter.css" />
 	</head>
 	<body>
 		<nav>
@@ -29,6 +29,7 @@
 				<div>
 					<div class="avatar">
 						<img src="images/MikhaelE.jpg">
+						<div class="activity"></div>
 					</div>
 					<h3>Mikhael E.</h3>
 				</div>
@@ -37,15 +38,15 @@
 		<section class="content">
 			<header class="topbar">
 				<ul>
-					<li><i class="icon-wallet"></i><span>$1,500.00</span><i class="icon-arrow-down-small"></i></li>
-					<li><i class="icon-notification"></i></li>
-					<li class="user"><i class="icon-profile"></i><span>Leonardo Dicaprio</span></li>
-					<li><i class="icon-quit"></i></li>
+					<li><button><i class="icon-wallet"></i><span><strong>$1,500.00</strong></span><i class="icon-arrow-down-small"></i></button></li>
+					<li><button><i class="icon-notification"></i></button></li>
+					<li class="user"><button><i class="icon-profile"></i><span>Leonardo Dicaprio</span></button></li>
+					<li><button><i class="icon-quit"></i></button></li>
 				</ul>
 			</header>
 			<main>
 				<section class="statistics">
-					<h4>General Statistics</h4>
+					<h4 class="titles">General Statistic</h4>
 					<div class="range">
 						<div class="dateRangePicker">
 							<div class="input">
@@ -58,28 +59,24 @@
 					</div>
 					<div class="data">
 						<div class="container">
-							<div class="fourLines">
-								<div class="row">
-									<h2 class="col-6">Visit Signups<p>124</p></h2>
-									<h2 class="col-6">FTD<p>445</p></h2>
-								</div>
-								<div class="row">
-									<h2 class="col-6">Net deposit<p>564</p></h2>
-									<h2 class="col-6">Turn over<p>432</p></h2>
-								</div>
+							<div class="fourLines row">
+								<div class="col-6"><h2>Visit Signups</h2><h3>124</h3></div>
+								<div class="col-6"><h2>FTD</h2><h3>445</h3></div>
+								<div class="col-6"><h2>Net deposit</h2><h3>564</h3></div>
+								<div class="col-6"><h2>Turn over</h2><h3>432</h3></div>
 							</div>
 							<div class="chart">
 								<h2>Earnings chart</h2>
-								<button><div class="circle blue"></div>Signups</button>
-								<button><div class="circle orange"></div>FTD</button>
-								<button><div class="circle green"></div>Earned</button>
+								<button><i class="circle blue"></i>Signups</button>
+								<button><i class="circle orange"></i>FTD</button>
+								<button><i class="circle green"></i>Earned</button>
 							</div>
 							<img src="images/diagram.jpg" />
 						</div>
 					</div>
 				</section>
 				<section class="websites">
-					<h4>LINKS</h4>
+					<h4 class="titles">LINKS</h4>
 					<div class="data">
 						<div class="container">
 							<button class="center-block"> + add new </button>

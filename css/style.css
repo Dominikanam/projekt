@@ -88,8 +88,16 @@ body {
   display: flex;
 }
 
+button {
+  outline: none;
+}
+
+.titles {
+  color: #A6A6A6;
+}
+
 nav {
-  width: 300px;
+  width: 250px;
   -ms-flex: none;
       flex: none;
   height: 100vh;
@@ -106,7 +114,8 @@ nav .logo h1 {
   -ms-flex: 0 1 100%;
       flex: 0 1 100%;
   color: white;
-  font-size: 28px;
+  font-size: 24px;
+  font-weight: lighter;
   line-height: 36px;
   margin: 0;
   font-family: 'Pacifico', cursive;
@@ -123,7 +132,7 @@ nav .logo .menu {
 nav .logo .menu span {
   display: block;
   width: 20px;
-  height: 3px;
+  height: 2px;
   background: #A6A6A6;
   margin: 5px 0px;
   border-radius: 5px;
@@ -132,15 +141,15 @@ nav .logo .menu span {
 nav ul {
   margin: 0;
   padding-bottom: 10px;
-  border-bottom: 1px solid #bababa;
+  border-bottom: 1px solid #393232;
   list-style: none;
-  font-size: 18px;
+  font-size: 16px;
   line-height: 22px;
 }
 
 nav ul li {
   color: #A6A6A6;
-  padding: 10px;
+  padding: 10px 20px;
   vertical-align: middle;
   -webkit-user-select: none;
      -moz-user-select: none;
@@ -153,6 +162,7 @@ nav ul li:hover {
   color: white;
   cursor: pointer;
   background-color: #282828;
+  padding-left: 15px;
 }
 
 nav ul li:active {
@@ -167,8 +177,8 @@ nav ul li span {
 
 nav .manager h2 {
   color: #A6A6A6;
-  padding: 10px;
-  font-size: 24px;
+  padding: 10px 20px;
+  font-size: 16px;
   line-height: 32px;
   margin: 0;
 }
@@ -184,10 +194,11 @@ nav .manager > div {
 nav .manager > div .avatar {
   -ms-flex: none;
       flex: none;
-  width: 60px;
-  height: 60px;
+  width: 50px;
+  height: 50px;
   overflow: hidden;
   border-radius: 50%;
+  margin-left: 20px;
 }
 
 nav .manager > div .avatar img {
@@ -195,10 +206,20 @@ nav .manager > div .avatar img {
   height: inherit;
 }
 
+nav .manager > div .avatar .activity {
+  height: 10px;
+  width: 10px;
+  background-color: #32CD32;
+  position: absolute;
+  border-radius: 50%;
+  bottom: 430px;
+  left: 70px;
+}
+
 nav .manager > div h3 {
-  font-size: 20px;
+  font-size: 16px;
   color: #56819F;
-  padding: 10px;
+  padding: 10px 10px;
   margin: 0 0 0 10px;
 }
 
@@ -213,9 +234,15 @@ nav .manager > div h3 {
 }
 
 .content header {
-  border-bottom: 1px solid #bababa;
+  border-bottom: 1px solid #E3E3E3;
   -ms-flex: none;
       flex: none;
+  font-size: 16px;
+}
+
+.content header button {
+  border: none;
+  background-color: #F5F5F2;
 }
 
 .content header ul {
@@ -234,11 +261,11 @@ nav .manager > div h3 {
   display: inline-block;
   padding: 15px;
   color: #A6A6A6;
-  border-right: 1px solid #bababa;
+  border-right: 1px solid #E3E3E3;
 }
 
 .content header ul li:first-of-type {
-  border-left: 1px solid #bababa;
+  border-left: 1px solid #E3E3E3;
 }
 
 .content header ul li:last-of-type {
@@ -268,7 +295,7 @@ nav .manager > div h3 {
 }
 
 .content main > section > *:not(:first-child) {
-  border-top: 1px solid #bababa;
+  border-top: 1px solid #F5F5F2;
 }
 
 .content main > section > h4 {
@@ -282,35 +309,40 @@ nav .manager > div h3 {
 }
 
 .content main .statistics .range {
-  padding: 20px;
+  padding: 50px;
   text-align: center;
 }
 
-.content main .statistics .data .fourLines div {
-  display: block;
+.content main .statistics .data .fourLines > div {
+  padding: 5px 30px;
+  display: -ms-flexbox;
+  display: flex;
 }
 
-.content main .statistics .data .fourLines h2 {
-  margin: 0;
-  border-bottom: 1px solid #bababa;
-  font-size: 18px;
+.content main .statistics .data .fourLines > div h2 {
+  border-bottom: 1px solid #E3E3E3;
+  font-size: 16px;
+  padding-bottom: 5px;
   color: #A6A6A6;
   font-weight: bold;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  width: 300px;
+  width: 100%;
+  -ms-flex: 1 100%;
+      flex: 1 100%;
 }
 
-.content main .statistics .data .fourLines h2 p {
+.content main .statistics .data .fourLines > div h3 {
+  border-bottom: 1px solid #E3E3E3;
   color: black;
-  font-size: 14px;
-  font-weight: lighter;
-  margin-left: 50px;
+  font-size: 16px;
+  text-align: right;
+  white-space: nowrap;
 }
 
 .content main .statistics .data .chart {
   text-align: center;
-  padding: 10px;
+  padding-top: 50px;
 }
 
 .content main .statistics .data .chart h2 {
@@ -325,15 +357,14 @@ nav .manager > div h3 {
   border: none;
   background-color: transparent;
   color: #A6A6A6;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
   padding: 10px;
+  vertical-align: middle;
+  margin: 0 10px;
 }
 
 .content main .statistics .data .chart button:hover {
   background-color: #F3F3F1;
   border: none;
-  height: 30px;
   color: #A6A6A6;
 }
 
@@ -341,6 +372,7 @@ nav .manager > div h3 {
   height: 10px;
   width: 10px;
   border-radius: 50%;
+  margin-right: 5px;
 }
 
 .content main .statistics .data .chart .blue {
@@ -373,7 +405,7 @@ nav .manager > div h3 {
 }
 
 .content main .websites ul li {
-  border-bottom: 1px solid #bababa;
+  border-bottom: 1px solid #E3E3E3;
   padding: 20px;
 }
 
@@ -387,7 +419,7 @@ nav .manager > div h3 {
 }
 
 .content main .websites ul li:first-of-type {
-  border-top: 1px solid #bababa;
+  border-top: 1px solid #E3E3E3;
 }
 
 .content main .websites ul li a {
